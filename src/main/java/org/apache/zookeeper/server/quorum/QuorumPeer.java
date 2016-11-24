@@ -78,7 +78,7 @@ import org.slf4j.LoggerFactory;
  *
  * The request for the current leader will consist solely of an xid: int xid;
  *
- *
+ *  这个类就是表示zookeeper集群中的一个节点
  * 管理仲裁协议
  * 进行Leader选举
  */
@@ -450,6 +450,7 @@ public class QuorumPeer extends ZooKeeperThread implements QuorumStats.Provider 
     Election electionAlg;
 
     ServerCnxnFactory cnxnFactory;
+    //初始化FileTxnSnapLog，这个类主要管理Zookeeper中的操作日志(WAL)和snapshot
     private FileTxnSnapLog logFactory = null;
 
     private final QuorumStats quorumStats;

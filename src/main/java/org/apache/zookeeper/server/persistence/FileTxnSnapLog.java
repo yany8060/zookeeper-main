@@ -43,6 +43,8 @@ import org.slf4j.LoggerFactory;
  * above the implementations 
  * of txnlog and snapshot 
  * classes
+ *
+ * 这个类主要管理Zookeeper中的操作日志(WAL)和snapshot。
  */
 public class FileTxnSnapLog {
     //the direcotry containing the 
